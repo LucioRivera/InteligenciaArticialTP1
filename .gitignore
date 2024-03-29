@@ -1,3 +1,17 @@
 /__pycache__
 .swp
 /.ipynb_checkpoints
+/venv
+
+#Pycharm
+.idea
+*.iml
+.python-version
+
+
+t.py
+
+t2.py
+dist
+
+/.mypy_cache/
