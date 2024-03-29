@@ -1,0 +1,19 @@
+Acciones agente:
+
+Kill: No consume ciclos.
+Spell: 
+Move: 
+Stay: 
+Sabotage: Ocupa un ciclo 
+
+Estado: 
+- timeSpell
+- energy
+- tripulantAmount
+- location
+- Set<Room> toSabotage
+- Grafo
+
+Percepcion: 
+Set<Rooms> 
+- Quien esta en el nodo actual y los adyacentes
