@@ -9,7 +9,7 @@ class Impostor:
         self.energy = energy
         self.room = np.random.choice(self.map.rooms)
         self.sabotages_left = sabotages
-        self.crewmates = []
+        self.crewmates = None
 
     def see(self, perception):
         # Metodo que tiene que actualizar el estado interno con perception
@@ -24,6 +24,12 @@ class Impostor:
         """
         pass
 
+    def succeded(self):
+        return self.energy > 0 and all(c is None for c in self.crewmates) and len(self.sabotages_left) == 0
+
+
+    def failed(self):
+        return self.energy == 0
 
 def main():
     pass
