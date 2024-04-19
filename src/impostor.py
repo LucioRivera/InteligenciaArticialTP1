@@ -9,9 +9,24 @@ class Impostor:
         self.energy = energy
         self.room = np.random.choice(self.map.rooms)
         self.sabotages_left = sabotages
-        self.crewmates = []
+        self.crewmates = None
 
     def see(self, perception):
+        self.room = perception[0]
+        self.energy = perception[1]
+        self.sabotages_left = perception[2]
+
+        percept_crewmates = percecption[3]
+        # Inicializar los crewmates en la primera percepcion. Se asume que la primera de estas siempre es completa
+        if self.crewmates == None:
+            assert(None not in percept_crewmates)
+            self.crewmates = percept_crewmates
+        
+        assert(len(percept_crewmates) == len(self.crewmates))
+        for i in range(len(percept_crewmates)): 
+            if percept_crewmates[i] is not None:
+                self.crewmates[i] = percept_crewmates[i]
+
         # Metodo que tiene que actualizar el estado interno con perception
         # Perception (ImpostorRoom, ImpostorEnergy, RoomSabotagesLeft, CrewmatesRooms)
         pass
