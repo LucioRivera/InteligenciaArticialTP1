@@ -39,6 +39,12 @@ class Impostor:
         """
         pass
 
+    def succeded(self):
+        return self.energy > 0 and all(c is None for c in self.crewmates) and len(self.sabotages_left) == 0
+
+
+    def failed(self):
+        return self.energy == 0
 
 def main():
     pass

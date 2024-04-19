@@ -6,20 +6,24 @@ import numpy as np
 class SimulationAgent:
     def __init__(self, a_init_energy, crewmates, a_init_sabotageables):
         self.impostor = Impostor(a_init_energy, a_init_sabotageables)
-        self.skeld = Skeld(crewmates, self.impostor.room, a_init_energy, a_init_sabotageables)
+        self.skeld = Skeld(crewmates)
 
     def simulate(self):
         step = 0
-        while step < 1000 and not self.skeld.agent_succeded() and not self.skeld.agent_failed():
+        while step < 1000:
             perception = self.skeld.get_perception()
             self.impostor.see(perception)
             action = self.impostor.select_action()
             if action == None:
-                break;
-            self.skeld.update(action)
+                break
+            action.update(self.skeld, self.impostor)
+            if action.consume_step():
+                self.skeld.update()
             step += 1
+            if self.impostor.succeded() or self.impostor.failed():
+                break
 
-        if self.skeld.agent_succeded():
+        if self.impostor.succeded():
             print("EL AGENTE GANOOO")
         else:
             print("EL AGENTE PERDIO SADGE PEPOSAD")
