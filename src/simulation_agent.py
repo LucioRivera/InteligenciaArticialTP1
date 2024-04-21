@@ -5,8 +5,8 @@ import numpy as np
 
 class SimulationAgent:
     def __init__(self, a_init_energy, crewmates, a_init_sabotageables):
-        self.impostor = Impostor(a_init_energy, a_init_sabotageables)
         self.skeld = Skeld(crewmates)
+        self.impostor = Impostor(a_init_energy, a_init_sabotageables, skeld.crewmates)
 
     def simulate(self):
         step = 0
@@ -17,7 +17,7 @@ class SimulationAgent:
             if action == None:
                 break
             action.update(self.skeld, self.impostor)
-            if action.consume_step():
+            if action.is_consumable:
                 self.skeld.update()
             step += 1
             if self.impostor.succeded() or self.impostor.failed():

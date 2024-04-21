@@ -60,6 +60,7 @@ class SkeldStructure:
 
         return [room[0] for room in self.map[node]]
 
+
 def main():
     s = SkeldStructure()
     print(s.get_neighbors(Room("weapons")))

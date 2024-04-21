@@ -9,9 +9,6 @@ class Skeld:
 		self.crewmates = [Crewmate(np.random.choice(rooms)) for _ in range(crewmate_ammount)]
 		self.agent_sensor_timer = 0
 
-	def update(self):
-		for c in self.crewmates:
-			c.take_action(self.map)
 
 	def get_perception(self):
 		if self.agent_sensor_timer == 0:
