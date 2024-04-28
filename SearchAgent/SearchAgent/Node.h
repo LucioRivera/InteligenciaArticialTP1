@@ -5,6 +5,7 @@
 #include <set>
 #include "SkeldStructure.h"
 #include "Action.h"
+#include <unordered_set>
 
 class Action;
 
@@ -20,8 +21,9 @@ public:
 	static Action* getAction(Node, Node);
 	int heuristic() const;
 private:
+	static std::unordered_set<int> used_ids;
 	int crewmatesLeft() const;
-	int room, energy;
+	int room, energy, id;
 	std::vector<int> crewmates;
 	std::set<int> sabotagesLeft;
 };

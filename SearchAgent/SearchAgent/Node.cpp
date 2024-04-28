@@ -6,22 +6,45 @@
 #include "MoveToRoom.h"
 #include "SabotageRoom.h"
 #include <iostream>
+#include <random>
+#include <unordered_set>
+
+std::unordered_set<int> Node::used_ids = std::unordered_set<int>();
 
 Node::Node() {
+	this->id=0;
 	this->room = -1;
 	this->energy = 0;
 	this->crewmates = std::vector<int>();
 	this->sabotagesLeft = std::set<int>();
 }
+
 Node::Node(int room, int energy, std::vector<int> crewmates, std::set<int> sabotages) {
 	this->room = room;
 	this->energy = energy;
 	this->crewmates = crewmates;
 	this->sabotagesLeft = sabotages;
+
+	std::random_device rd; // obtain a random number from hardware
+	std::mt19937 gen(rd()); // seed the generator
+	std::uniform_int_distribution<> distr(1, 2147483647);
+	int random_number = distr(gen);
+	while(this->used_ids.find(random_number) != this->used_ids.end()) {
+		random_number = distr(gen);
+	}
+	this->used_ids.insert(random_number);
+	this->id = random_number;
+}
+
+
+int Node::crewmatesLeft() const {
+	int answer = 0;
+	for(const auto& v: this->crewmates) if (v != -1) answer++;
+	return answer;
 }
 
 bool Node::isGoal() {
-	return this->energy > 0 and this->sabotagesLeft.empty() and -accumulate(crewmates.begin(), crewmates.end(), 0) == crewmates.size();
+	return this->energy > 0 and this->sabotagesLeft.empty() and this->crewmatesLeft() == 0;
 }
 
 std::vector<Node> Node::expandNode(const SkeldStructure& map) {
@@ -94,11 +117,7 @@ Action* Node::getAction(Node parent, Node child) {
 	}
 }
 
-int Node::crewmatesLeft() const {
-	int answer = 0;
-	for(const auto& v: this->crewmates) if (v != -1) answer++;
-	return answer;
-}
+
 int Node::heuristic() const {
 	return this->crewmates.size() + this->crewmatesLeft();
 }
