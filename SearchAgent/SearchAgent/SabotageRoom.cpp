@@ -11,3 +11,7 @@ void SabotageRoom::update(Skeld& skeld, Impostor& impostor) {
 bool SabotageRoom::usesTime() {
 	return true;
 }
+
+bool SabotageRoom::usesEnergy() {
+	return false;
+}

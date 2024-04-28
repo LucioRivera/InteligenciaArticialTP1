@@ -12,3 +12,7 @@ void EliminateCrewmate::update(Skeld& skeld, Impostor& impostor) {
 bool EliminateCrewmate::usesTime(){
 	return false;
 }
+
+bool EliminateCrewmate::usesEnergy() {
+	return false;
+}

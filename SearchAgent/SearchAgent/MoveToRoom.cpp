@@ -12,3 +12,7 @@ void MoveToRoom::update(Skeld& skeld, Impostor& impostor) {
 bool MoveToRoom::usesTime() {
     return true;
 }
+
+bool MoveToRoom::usesEnergy() {
+	return true;
+}

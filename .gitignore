@@ -3,7 +3,9 @@ src/__pycache__/
 .swp
 /.ipynb_checkpoints
 /venv
-
+/SearchAgent/.vs
+/SearchAgent/.vscode
+/SearchAgent/SearchAgent/.vscode
 #Pycharm
 .idea
 *.iml

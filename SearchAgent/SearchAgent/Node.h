@@ -18,7 +18,9 @@ public:
 	bool operator==(const Node&) const;
 	bool operator!=(const Node&) const;
 	static Action* getAction(Node, Node);
+	int heuristic() const;
 private:
+	int crewmatesLeft() const;
 	int room, energy;
 	std::vector<int> crewmates;
 	std::set<int> sabotagesLeft;

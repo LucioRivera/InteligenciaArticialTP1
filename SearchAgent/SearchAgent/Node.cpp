@@ -93,3 +93,12 @@ Action* Node::getAction(Node parent, Node child) {
 		return new EliminateCrewmate(crewmateIdx);
 	}
 }
+
+int Node::crewmatesLeft() const {
+	int answer = 0;
+	for(const auto& v: this->crewmates) if (v != -1) answer++;
+	return answer;
+}
+int Node::heuristic() const {
+	return this->crewmates.size() + this->crewmatesLeft();
+}
