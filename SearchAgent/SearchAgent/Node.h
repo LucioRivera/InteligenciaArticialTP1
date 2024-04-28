@@ -1,10 +1,8 @@
 #pragma once
-#ifndef NODE_H
-#define NODE_H
-#include <vector>
-#include <set>
 #include "SkeldStructure.h"
 #include "Action.h"
+#include <vector>
+#include <set>
 
 class Action;
 
@@ -25,13 +23,3 @@ private:
 	std::vector<int> crewmates;
 	std::set<int> sabotagesLeft;
 };
-
-/*
-struct Node {
-	int room, energy;
-	std::vector<int> crewmates;
-	std::set<int> sabotagesLeft;
-	Node* parent;
-};
-*/
-#endif

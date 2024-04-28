@@ -1,8 +1,6 @@
 #pragma once
-#ifndef ELIMINATE_CREWMATE_H
-#define ELIMINATE_CREWMATE_H
-
 #include "Action.h"
+
 class EliminateCrewmate : public Action{
 public:
 	EliminateCrewmate(int);
@@ -12,5 +10,3 @@ public:
 private:
 	int crewmateIdx;
 };
-
-#endif

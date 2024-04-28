@@ -1,10 +1,8 @@
 #pragma once
-#ifndef SKELD_H
-#define SKELD_H
 
 #include "SkeldStructure.h"
-#include <vector>
 #include "Crewmate.h"
+#include <vector>
 
 class Skeld{
 public:
@@ -23,5 +21,3 @@ private:
 	int agentSensorTimer;
 	int agentRoom;
 };
-
-#endif

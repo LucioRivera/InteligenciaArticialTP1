@@ -56,9 +56,11 @@ bool Node::operator<(const Node& other) const {
 		return this->crewmates < other.crewmates;
 	return this->sabotagesLeft < other.sabotagesLeft;
 }
+
 bool Node::operator==(const Node& other) const {
 	return !(*this != other);
 }
+
 bool Node::operator!=(const Node& other) const {
 	return this->room != other.room or this->energy != other.energy or this->crewmates != other.crewmates or this->sabotagesLeft != other.sabotagesLeft;
 }
@@ -99,6 +101,7 @@ int Node::crewmatesLeft() const {
 	for(const auto& v: this->crewmates) if (v != -1) answer++;
 	return answer;
 }
+
 int Node::heuristic() const {
 	return this->crewmates.size() + this->crewmatesLeft();
 }

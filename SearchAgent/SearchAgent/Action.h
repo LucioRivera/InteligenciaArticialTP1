@@ -1,11 +1,7 @@
 #pragma once
-#ifndef ACTION_H
-#define ACTION_H
-
 #include "Skeld.h"
 #include "Impostor.h"
 
-class Skeld;
 class Impostor;
 
 class Action{
@@ -14,5 +10,3 @@ public:
     virtual bool usesTime() = 0;
 	virtual bool usesEnergy() = 0;
 };
-
-#endif

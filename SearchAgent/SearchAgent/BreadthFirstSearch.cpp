@@ -1,13 +1,8 @@
 #include "BreadthFirstSearch.h"
 #include <queue>
-#include <tuple>
-#include <algorithm>
 #include <map>
-#include "SkeldStructure.h"
-#include <iostream>
 
 Action* BreadthFirstSearch::selectAction(Node beginNode) {
-	SkeldStructure map = SkeldStructure(); // cambiar
 	std::map<Node, Node> parent;
 	parent[beginNode] = beginNode;
 	std::queue<Node> q;
@@ -31,6 +26,5 @@ Action* BreadthFirstSearch::selectAction(Node beginNode) {
 			}
 		}		
 	}
-	std::cout << "HIZO ACCION\n";
 	return action;
 }

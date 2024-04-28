@@ -1,8 +1,8 @@
 #include "Impostor.h"
+#include "Node.h"
 #include <algorithm>
 #include <cassert>
 #include <iostream>
-#include "Node.h"
 
 Impostor::Impostor() {
     this->map = SkeldStructure();
@@ -10,6 +10,7 @@ Impostor::Impostor() {
     this->energy = 0;
     this->crewmates = std::vector<int>();
     this->sabotagesLeft = std::set<int>();
+    this->strategy = NULL;
 }
 
 Impostor::Impostor(int initialRoom, int energy, std::vector<int> crewmates, std::set<int> sabotages, Strategy *searchStrategy) {

@@ -1,7 +1,5 @@
 #include "Skeld.h"
 #include <cassert>
-#include <algorithm>
-#include <iterator>
 #include <iostream>
 
 Skeld::Skeld() {

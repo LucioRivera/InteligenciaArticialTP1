@@ -1,5 +1,4 @@
 #include "Crewmate.h"
-#include <iostream>
 
 Crewmate::Crewmate() {
     this->actualRoom = 0;

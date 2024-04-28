@@ -1,16 +1,11 @@
 #include "AStar.h"
 #include <queue>
-#include <tuple>
-#include <algorithm>
 #include <map>
-#include "SkeldStructure.h"
-#include <iostream>
-#include <queue>
-#include <functional>
+#include <utility>
 typedef std::pair<int, Node> ASTARpair;
 
 Action* AStar::selectAction(Node beginNode) {
-	SkeldStructure map = SkeldStructure(); // cambiar
+	
 	std::map<Node, Node> parent;
 	parent[beginNode] = beginNode;
 	std::priority_queue<ASTARpair, std::vector<ASTARpair>, std::greater<ASTARpair>> q;
@@ -19,7 +14,6 @@ Action* AStar::selectAction(Node beginNode) {
 	while (not q.empty()) {
 		Node node = q.top().second;
 		int partial_f = q.top().first;
-		//std::cout << "Q.front = " << partial_cost << '\n';
 		q.pop();
 		if (node.isGoal()) {
 			// goal
@@ -36,6 +30,5 @@ Action* AStar::selectAction(Node beginNode) {
 			}
 		}		
 	}
-	std::cout << "HIZO ACCION\n";
 	return action;
 }
