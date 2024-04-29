@@ -9,10 +9,6 @@ void MoveToRoom::update(Skeld& skeld, Impostor& impostor) {
     skeld.moveAgent(this->transitionRoom);
 }
 
-bool MoveToRoom::usesTime() {
-    return true;
-}
-
 bool MoveToRoom::usesEnergy() {
 	return true;
 }

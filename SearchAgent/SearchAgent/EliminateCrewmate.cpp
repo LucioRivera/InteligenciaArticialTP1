@@ -9,10 +9,6 @@ void EliminateCrewmate::update(Skeld& skeld, Impostor& impostor) {
 	impostor.eliminateCrewmate(this->crewmateIdx);
 }
 
-bool EliminateCrewmate::usesTime(){
-	return false;
-}
-
 bool EliminateCrewmate::usesEnergy() {
 	return false;
 }

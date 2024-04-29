@@ -2,7 +2,7 @@
 #include "Action.h"
 #include <cassert>
 #include <chrono>
-#include <iostream> // sacar despues
+#include <iostream>
 
 SimulationAgent::SimulationAgent(int initialEnergy, int initialCrewmates, std::set<int> sabotages, Strategy* strategy) {
     this->perceptionAmmount = 0;
@@ -27,9 +27,7 @@ void SimulationAgent::simulate() {
             break;
         }
         action->update(this->skeld, this->impostor);
-        if (action->usesTime()) {
-            this->skeld.updateCrewmates();
-        }
+        this->skeld.updateCrewmates();
         this->energyUsed += action->usesEnergy();
         this->execTime.push_back(std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count());
         if (this->impostor.succeeded() or this->impostor.failed())
