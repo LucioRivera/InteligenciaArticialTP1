@@ -7,10 +7,7 @@
 #include "SabotageRoom.h"
 #include <iostream>
 
-//unsigned long long Node::lastUsedId;
-
 Node::Node() {
-	//this->id=0;
 	this->room = -1;
 	this->energy = 0;
 	this->crewmates = std::vector<int>();
@@ -22,8 +19,6 @@ Node::Node(int room, int energy, std::vector<int> crewmates, std::set<int> sabot
 	this->energy = energy;
 	this->crewmates = crewmates;
 	this->sabotagesLeft = sabotages;
-	//this->id = lastUsedId + 1;
-	//Node::lastUsedId++;
 }
 
 int Node::getSabotagesLeft() const {
@@ -35,14 +30,6 @@ int Node::getCrewmatesLeft() const {
 	for(const auto& v: this->crewmates) if (v != -1) answer++;
 	return answer;
 }
-/*
-int Node::getId() const {
-	return this->id;
-}
-
-void Node::resetIds() {
-	Node::lastUsedId = 0;
-}*/
 
 bool Node::isGoal() {
 	return this->energy > 0 and this->sabotagesLeft.empty() and this->getCrewmatesLeft() == 0;
@@ -80,10 +67,7 @@ bool Node::operator<(const Node& other) const {
 		return this->crewmates < other.crewmates;
 	return this->sabotagesLeft < other.sabotagesLeft;	
 }
-/*
-bool Node::operator>(const Node& other) const {
-	return this->energy > other.energy;
-}*/
+
 bool Node::operator==(const Node& other) const {
 	return !(*this != other);
 }

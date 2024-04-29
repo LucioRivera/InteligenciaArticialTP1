@@ -52,11 +52,11 @@ void SimulationAgent::printMetrics() {
     std::cout << "--- METRICAS ---\n";
     std::cout << "Cantidad de ciclos de percepciones: " << this->perceptionAmmount << '\n';
     std::cout << "Cantidad de energia gastada: " << this->energyUsed << '\n';
-    std::cout << "Tiempos de ejecuci�n:";
+    std::cout << "Tiempos de ejecucion:";
     double avg = 0;
     for (const long long& t : this->execTime) {
         avg += t;
         std::cout << ' ' << t;
     }
-    std::cout << "\nTiempo promedio de ejecuci�n: " << avg / this->execTime.size() << "\n --- ---\n";
+    std::cout << "\nTiempo promedio de ejecucion: " << avg / this->execTime.size() << "\n --- ---\n";
 }
