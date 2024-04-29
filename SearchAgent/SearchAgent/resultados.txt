@@ -1,0 +1,231 @@
+-----------------------------------
+CREWMATES INICIALES: 4 - ENERGIA INICIAL: 71
+
+--- BREADTH FIRST SEARCH AGENT ---
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 13
+Cantidad de energia gastada: 6
+Tiempos de ejecuci¾n: 273 58 54 32 15 16 15 6 1 1 2 1 0
+Tiempo promedio de ejecuci¾n: 36.4615
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 12
+Cantidad de energia gastada: 5
+Tiempos de ejecuci¾n: 135 95 37 11 5 5 3 2 1 0 0 0
+Tiempo promedio de ejecuci¾n: 24.5
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 16
+Cantidad de energia gastada: 9
+Tiempos de ejecuci¾n: 303 242 111 82 70 30 30 20 9 3 4 3 1 0 0 0
+Tiempo promedio de ejecuci¾n: 56.75
+ --- ---
+
+--- MINIMUM UNIFORM COST SEARCH AGENT ---
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 13
+Cantidad de energia gastada: 6
+Tiempos de ejecuci¾n: 166 36 33 22 10 6 2 1 0 1 0 0 0
+Tiempo promedio de ejecuci¾n: 21.3077
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 12
+Cantidad de energia gastada: 5
+Tiempos de ejecuci¾n: 56 35 16 5 3 3 1 1 1 0 0 0
+Tiempo promedio de ejecuci¾n: 10.0833
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 16
+Cantidad de energia gastada: 9
+Tiempos de ejecuci¾n: 198 144 63 34 29 13 12 9 4 0 1 1 0 0 0 1
+Tiempo promedio de ejecuci¾n: 31.8125
+ --- ---
+
+--- A STAR SEARCH AGENT ---
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 16
+Cantidad de energia gastada: 9
+Tiempos de ejecuci¾n: 82 22 19 11 6 7 3 5 3 1 0 0 1 0 0 0
+Tiempo promedio de ejecuci¾n: 10
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 12
+Cantidad de energia gastada: 5
+Tiempos de ejecuci¾n: 25 16 9 3 3 2 2 0 1 0 0 0
+Tiempo promedio de ejecuci¾n: 5.08333
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 17
+Cantidad de energia gastada: 10
+Tiempos de ejecuci¾n: 170 65 31 16 9 6 3 3 3 3 2 0 1 0 1 0 0
+Tiempo promedio de ejecuci¾n: 18.4118
+ --- ---
+-----------------------------------
+CREWMATES INICIALES: 8 - ENERGIA INICIAL: 105
+
+--- BREADTH FIRST SEARCH AGENT ---
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 19
+Cantidad de energia gastada: 8
+Tiempos de ejecuci¾n: 2267 1053 389 210 168 79 72 29 25 16 5 2 2 3 1 1 0 1 0
+Tiempo promedio de ejecuci¾n: 227.526
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 21
+Cantidad de energia gastada: 10
+Tiempos de ejecuci¾n: 3442 2116 987 481 133 94 43 27 12 10 15 7 13 5 4 2 1 0 0 0 0
+Tiempo promedio de ejecuci¾n: 352
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 23
+Cantidad de energia gastada: 12
+Tiempos de ejecuci¾n: 6884 5803 2444 1303 609 975 701 344 286 118 42 36 13 20 9 8 4 2 2 1 0 0 0
+Tiempo promedio de ejecuci¾n: 852.348
+ --- ---
+
+--- MINIMUM UNIFORM COST SEARCH AGENT ---
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 19
+Cantidad de energia gastada: 8
+Tiempos de ejecuci¾n: 961 424 191 84 49 22 13 5 4 1 2 0 1 0 0 1 0 0 0
+Tiempo promedio de ejecuci¾n: 92.5263
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 22
+Cantidad de energia gastada: 11
+Tiempos de ejecuci¾n: 1502 982 468 226 18 16 7 3 2 3 7 4 12 5 2 1 1 1 1 0 0 0
+Tiempo promedio de ejecuci¾n: 148.227
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 20
+Cantidad de energia gastada: 9
+Tiempos de ejecuci¾n: 4357 3055 2767 1289 564 547 138 70 46 20 19 12 9 4 2 2 1 0 0 0
+Tiempo promedio de ejecuci¾n: 645.1
+ --- ---
+
+--- A STAR SEARCH AGENT ---
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 18
+Cantidad de energia gastada: 7
+Tiempos de ejecuci¾n: 593 303 110 43 34 17 18 9 7 4 2 1 1 1 1 0 0 0
+Tiempo promedio de ejecuci¾n: 63.5556
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 20
+Cantidad de energia gastada: 9
+Tiempos de ejecuci¾n: 604 373 195 111 29 24 12 6 3 5 11 8 4 2 1 1 0 0 0 0
+Tiempo promedio de ejecuci¾n: 69.45
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 20
+Cantidad de energia gastada: 9
+Tiempos de ejecuci¾n: 2099 1009 812 431 202 238 110 52 36 17 17 8 5 4 3 2 1 0 0 0
+Tiempo promedio de ejecuci¾n: 252.3
+ --- ---
+-----------------------------------
+CREWMATES INICIALES: 12 - ENERGIA INICIAL: 72
+
+--- BREADTH FIRST SEARCH AGENT ---
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 23
+Cantidad de energia gastada: 8
+Tiempos de ejecuci¾n: 16225 7562 4016 1148 833 675 292 496 208 298 197 139 60 25 23 11 8 5 2 1 0 0 0
+Tiempo promedio de ejecuci¾n: 1401.04
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 27
+Cantidad de energia gastada: 12
+Tiempos de ejecuci¾n: 39914 28288 17298 7938 1357 901 533 223 208 93 199 148 71 84 38 44 17 12 5 4 6 5 2 1 1 0 0
+Tiempo promedio de ejecuci¾n: 3607.04
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 33
+Cantidad de energia gastada: 18
+Tiempos de ejecuci¾n: 45653 61386 25767 18613 16989 7697 11917 11110 4844 1467 1296 1747 1052 533 440 202 172 254 113 70 29 41 18 16 7 9 4 3 1 1 0 0 0
+Tiempo promedio de ejecuci¾n: 6407.61
+ --- ---
+
+--- MINIMUM UNIFORM COST SEARCH AGENT ---
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 33
+Cantidad de energia gastada: 18
+Tiempos de ejecuci¾n: 4731 2239 1344 1292 753 1266 738 458 214 191 101 325 155 128 51 17 26 13 12 4 7 3 2 2 4 1 1 1 1 0 0 0 0
+Tiempo promedio de ejecuci¾n: 426.667
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 30
+Cantidad de energia gastada: 15
+Tiempos de ejecuci¾n: 10814 7859 5126 2419 471 328 202 125 84 37 103 129 50 56 26 12 24 12 9 9 5 3 0 1 0 0 0 1 0 0
+Tiempo promedio de ejecuci¾n: 930.167
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 28
+Cantidad de energia gastada: 13
+Tiempos de ejecuci¾n: 21165 29900 27753 13266 5706 2877 3382 2498 1564 731 526 233 79 36 43 20 16 11 6 6 9 2 1 1 0 0 0 0
+Tiempo promedio de ejecuci¾n: 3922.54
+ --- ---
+
+--- A STAR SEARCH AGENT ---
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 23
+Cantidad de energia gastada: 8
+Tiempos de ejecuci¾n: 3893 1861 904 252 190 129 73 116 59 59 45 28 15 7 5 3 2 1 0 1 0 0 0
+Tiempo promedio de ejecuci¾n: 332.304
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 26
+Cantidad de energia gastada: 11
+Tiempos de ejecuci¾n: 7272 5384 3500 1803 271 240 144 67 58 29 62 41 22 31 15 7 3 5 3 1 0 1 0 1 0 0
+Tiempo promedio de ejecuci¾n: 729.231
+ --- ---
+
+El agente gano
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 28
+Cantidad de energia gastada: 13
+Tiempos de ejecuci¾n: 6811 13358 11076 5754 2528 1217 1497 1102 806 428 203 129 100 103 73 41 14 7 6 3 1 3 1 1 0 0 0 0
+Tiempo promedio de ejecuci¾n: 1616.5
+ --- ---

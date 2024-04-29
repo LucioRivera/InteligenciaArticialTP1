@@ -1,12 +1,8 @@
 #pragma once
-#ifndef IMPOSTOR_H
-#define IMPOSTOR_H
-
+#include "SkeldStructure.h"
+#include "Strategy.h"
 #include<vector>
 #include<set>
-#include "SkeldStructure.h"
-#include "Action.h"
-#include "Strategy.h"
 
 class Action;
 class Strategy;
@@ -31,5 +27,3 @@ private:
     std::set<int> sabotagesLeft;
     Strategy* strategy;
 };
-
-#endif

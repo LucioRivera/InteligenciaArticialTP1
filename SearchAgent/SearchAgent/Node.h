@@ -1,11 +1,8 @@
 #pragma once
-#ifndef NODE_H
-#define NODE_H
-#include <vector>
-#include <set>
 #include "SkeldStructure.h"
 #include "Action.h"
-#include <unordered_set>
+#include <vector>
+#include <set>
 
 class Action;
 
@@ -16,24 +13,18 @@ public:
 	bool isGoal();
 	std::vector<Node> expandNode(const SkeldStructure& map);
 	bool operator<(const Node&) const;
+	bool operator>(const Node&) const;
 	bool operator==(const Node&) const;
 	bool operator!=(const Node&) const;
 	static Action* getAction(Node, Node);
-	int heuristic() const;
+	static void resetIds();
+	int getSabotagesLeft() const;
+	int getCrewmatesLeft() const;
+	int getId() const; //Para debugear nomas
 private:
-	static std::unordered_set<int> used_ids;
-	int crewmatesLeft() const;
-	int room, energy, id;
-	std::vector<int> crewmates;
-	std::set<int> sabotagesLeft;
-};
-
-/*
-struct Node {
 	int room, energy;
+	//unsigned long long id;
+	//static unsigned long long lastUsedId; 
 	std::vector<int> crewmates;
 	std::set<int> sabotagesLeft;
-	Node* parent;
 };
-*/
-#endif

@@ -1,6 +1,4 @@
 #pragma once
-#ifndef CREWMATE_H
-#define CREWMATE_H
 
 #include "SkeldStructure.h"
 
@@ -17,5 +15,3 @@ private:
     int actualRoom;
     int moveTimer;
 };
-
-#endif

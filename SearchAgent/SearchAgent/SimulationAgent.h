@@ -1,6 +1,4 @@
 #pragma once
-#ifndef SIMULATION_AGENT_H
-#define SIMULATION_AGENT_H
 
 #include <set>
 #include "Skeld.h"
@@ -18,6 +16,9 @@ public:
 private:
     Skeld skeld;
     Impostor impostor;
+    // metrics
+    int perceptionAmmount;
+    int energyUsed;
+    std::vector<long long> execTime;
+    void printMetrics();
 };
-
-#endif

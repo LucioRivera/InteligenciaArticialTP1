@@ -141,6 +141,8 @@
     <ClCompile Include="SkeldStructure.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Strategy.cpp" />
+    <ClCompile Include="MinimumUniformCost.cpp" />
+    <ClCompile Include="AStar.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Action.h" />
@@ -156,6 +158,8 @@
     <ClInclude Include="Skeld.h" />
     <ClInclude Include="SkeldStructure.h" />
     <ClInclude Include="Strategy.h" />
+    <ClInclude Include="MinimumUniformCost.h" />
+    <ClInclude Include="AStar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

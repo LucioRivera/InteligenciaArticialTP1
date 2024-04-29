@@ -1,25 +1,19 @@
 #include "AStar.h"
 #include <queue>
-#include <tuple>
-#include <algorithm>
 #include <map>
-#include "SkeldStructure.h"
-#include <iostream>
-#include <queue>
-#include <functional>
+#include <utility>
 typedef std::pair<int, Node> ASTARpair;
 
 Action* AStar::selectAction(Node beginNode) {
-	SkeldStructure map = SkeldStructure(); // cambiar
+	
 	std::map<Node, Node> parent;
 	parent[beginNode] = beginNode;
 	std::priority_queue<ASTARpair, std::vector<ASTARpair>, std::greater<ASTARpair>> q;
-	q.push({0 + beginNode.heuristic(), beginNode});
+	q.push({0 + beginNode.getCrewmatesLeft() + beginNode.getSabotagesLeft(), beginNode});
 	Action* action = nullptr;
 	while (not q.empty()) {
 		Node node = q.top().second;
 		int partial_f = q.top().first;
-		//std::cout << "Q.front = " << partial_cost << '\n';
 		q.pop();
 		if (node.isGoal()) {
 			// goal
@@ -32,10 +26,9 @@ Action* AStar::selectAction(Node beginNode) {
 		for (const Node& neighbor : neighbors) {
 			if (parent.count(neighbor) == 0) {
 				parent[neighbor] = node;
-				q.push({partial_f + Node::getAction(node, neighbor)->usesEnergy() + neighbor.heuristic(), neighbor});
+				q.push({partial_f + Node::getAction(node, neighbor)->usesEnergy() + neighbor.getCrewmatesLeft() + neighbor.getSabotagesLeft(), neighbor});
 			}
 		}		
 	}
-	std::cout << "HIZO ACCION\n";
 	return action;
 }

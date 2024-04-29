@@ -6,13 +6,11 @@
 #include "MoveToRoom.h"
 #include "SabotageRoom.h"
 #include <iostream>
-#include <random>
-#include <unordered_set>
 
-std::unordered_set<int> Node::used_ids = std::unordered_set<int>();
+//unsigned long long Node::lastUsedId;
 
 Node::Node() {
-	this->id=0;
+	//this->id=0;
 	this->room = -1;
 	this->energy = 0;
 	this->crewmates = std::vector<int>();
@@ -24,27 +22,30 @@ Node::Node(int room, int energy, std::vector<int> crewmates, std::set<int> sabot
 	this->energy = energy;
 	this->crewmates = crewmates;
 	this->sabotagesLeft = sabotages;
-
-	std::random_device rd; // obtain a random number from hardware
-	std::mt19937 gen(rd()); // seed the generator
-	std::uniform_int_distribution<> distr(1, 2147483647);
-	int random_number = distr(gen);
-	while(this->used_ids.find(random_number) != this->used_ids.end()) {
-		random_number = distr(gen);
-	}
-	this->used_ids.insert(random_number);
-	this->id = random_number;
+	//this->id = lastUsedId + 1;
+	//Node::lastUsedId++;
 }
 
+int Node::getSabotagesLeft() const {
+	return this->sabotagesLeft.size();
+}
 
-int Node::crewmatesLeft() const {
+int Node::getCrewmatesLeft() const {
 	int answer = 0;
 	for(const auto& v: this->crewmates) if (v != -1) answer++;
 	return answer;
 }
+/*
+int Node::getId() const {
+	return this->id;
+}
+
+void Node::resetIds() {
+	Node::lastUsedId = 0;
+}*/
 
 bool Node::isGoal() {
-	return this->energy > 0 and this->sabotagesLeft.empty() and this->crewmatesLeft() == 0;
+	return this->energy > 0 and this->sabotagesLeft.empty() and this->getCrewmatesLeft() == 0;
 }
 
 std::vector<Node> Node::expandNode(const SkeldStructure& map) {
@@ -77,11 +78,16 @@ bool Node::operator<(const Node& other) const {
 		return this->room < other.room;
 	if (this->crewmates != other.crewmates)
 		return this->crewmates < other.crewmates;
-	return this->sabotagesLeft < other.sabotagesLeft;
+	return this->sabotagesLeft < other.sabotagesLeft;	
 }
+/*
+bool Node::operator>(const Node& other) const {
+	return this->energy > other.energy;
+}*/
 bool Node::operator==(const Node& other) const {
 	return !(*this != other);
 }
+
 bool Node::operator!=(const Node& other) const {
 	return this->room != other.room or this->energy != other.energy or this->crewmates != other.crewmates or this->sabotagesLeft != other.sabotagesLeft;
 }
@@ -115,9 +121,4 @@ Action* Node::getAction(Node parent, Node child) {
 		}
 		return new EliminateCrewmate(crewmateIdx);
 	}
-}
-
-
-int Node::heuristic() const {
-	return this->crewmates.size() + this->crewmatesLeft();
 }

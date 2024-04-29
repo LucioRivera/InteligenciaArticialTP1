@@ -1,33 +1,47 @@
 #include <iostream>
-#include <algorithm>
-#include <vector>
 #include <set>
 #include "SimulationAgent.h"
-#include "Crewmate.h"
 #include "BreadthFirstSearch.h"
 #include "MinimumUniformCost.h"
 #include "AStar.h"
+#include <tuple>
 using namespace std;
 
 int main(){
-    int initialEnergy = 30 + rand() % 121;
-    int initialCrewmates = 12;// 3 + rand() % 3;
-
-    cout << "ARRANCA EL MCU" << endl;
+    unsigned int seeds[] = { 345, 777, 169 };
+    std::pair<int, int> experimentos[] = {
+        {4, 30 + rand() % 121},
+        {8, 30 + rand() % 121},
+        {12, 30 + rand() % 121}
+    }; // initCrewmates, initEnergy
     std::set<int> sabotages = { 9, 3, 2 }; // Electrical, reactor, weapons
-    Strategy* strategy = new MinimumUniformCost();
-    SimulationAgent simAgent = SimulationAgent(initialEnergy, initialCrewmates, sabotages, strategy);
-    simAgent.simulate();
+    Strategy* bfsStrategy = new BreadthFirstSearch();
+    Strategy* mcuStrategy = new MinimumUniformCost();
+    Strategy* aStarStrategy = new AStar();
 
-    cout << "ARRANCA EL BFS" << endl;
-    std::set<int> sabotages2 = { 9, 3, 2 }; // Electrical, reactor, weapons
-    strategy = new BreadthFirstSearch();
-    simAgent = SimulationAgent(initialEnergy, initialCrewmates, sabotages2, strategy);
-    simAgent.simulate();
+    for (const pair<int,int>& it : experimentos) {
+        cout << "-----------------------------------\n";
+        cout << "CREWMATES INICIALES: " << it.first << " - ENERGIA INICIAL: " << it.second << '\n';
 
-    cout << "ARRANCA EL ASTAR" << endl;
-    std::set<int> sabotages3 = { 9, 3, 2 }; // Electrical, reactor, weapons
-    strategy = new AStar();
-    simAgent = SimulationAgent(initialEnergy, initialCrewmates, sabotages2, strategy);
-    simAgent.simulate();
+        cout << "\n--- BREADTH FIRST SEARCH AGENT ---";
+        for (const unsigned int& seed : seeds) {
+            srand(seed);
+            SimulationAgent simAgent = SimulationAgent(it.second, it.first, sabotages, bfsStrategy);
+            simAgent.simulate();
+        }
+
+        cout << "\n--- MINIMUM UNIFORM COST SEARCH AGENT ---";
+        for (const unsigned int& seed : seeds) {
+            srand(seed);
+            SimulationAgent simAgent = SimulationAgent(it.second, it.first, sabotages, mcuStrategy);
+            simAgent.simulate();
+        }
+
+        cout << "\n--- A STAR SEARCH AGENT ---";
+        for (const unsigned int& seed : seeds) {
+            srand(seed);
+            SimulationAgent simAgent = SimulationAgent(it.second, it.first, sabotages, aStarStrategy);
+            simAgent.simulate();
+        }
+    }
 }
