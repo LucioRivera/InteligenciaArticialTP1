@@ -16,5 +16,7 @@ t.py
 
 t2.py
 dist
-
+SearchAgent/.vs/
+SearchAgent/x64/
+SearchAgent/SearchAgent/x64/
 /.mypy_cache/
