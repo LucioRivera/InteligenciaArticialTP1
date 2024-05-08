@@ -2,4 +2,4 @@
 - https://dreampuf.github.io/GraphvizOnline/
 
 ### Resultados experimentos
-- ![Resultados](experimentos - resultados.png)
+![Resultados](experimentos - resultados.png)
