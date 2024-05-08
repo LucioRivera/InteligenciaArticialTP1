@@ -12,3 +12,7 @@ void EliminateCrewmate::update(Skeld& skeld, Impostor& impostor) {
 bool EliminateCrewmate::usesEnergy() {
 	return false;
 }
+
+void EliminateCrewmate::printType() {
+	std::cout << "Se elimina al crewmate #" << crewmateIdx << '\n';
+}

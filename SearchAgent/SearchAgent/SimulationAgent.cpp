@@ -13,12 +13,14 @@ SimulationAgent::SimulationAgent(int initialEnergy, int initialCrewmates, std::s
 }
 
 void SimulationAgent::simulate() {
-    //this->skeld.printState();
-    //this->impostor.printState();
+    
     while (this->perceptionAmmount < 10'000) {
+        std::cout << "\n+++ STEP #" << this->perceptionAmmount << " +++\n";
         this->perceptionAmmount++;
         std::vector<int> perception = this->skeld.getPerception();
         this->impostor.see(perception);
+        this->skeld.printState();
+        this->impostor.printState();
         auto start = std::chrono::high_resolution_clock::now();
         Action* action = this->impostor.selectAction();
         auto end = std::chrono::high_resolution_clock::now();
@@ -26,6 +28,7 @@ void SimulationAgent::simulate() {
             assert(0);
             break;
         }
+        action->printType();
         action->update(this->skeld, this->impostor);
         this->skeld.updateCrewmates();
         this->energyUsed += action->usesEnergy();
@@ -33,10 +36,9 @@ void SimulationAgent::simulate() {
         if (this->impostor.succeeded() or this->impostor.failed())
             break;
         delete action;
-        //this->skeld.printState();
-        //this->impostor.printState();
     }
-    std::cout << '\n';
+    this->skeld.printState();
+    this->impostor.printState();
     if (this->impostor.succeeded())
         std::cout << "El agente gano" << std::endl;
     else if (this->impostor.failed())
@@ -47,7 +49,7 @@ void SimulationAgent::simulate() {
 }
 
 void SimulationAgent::printMetrics() {
-    std::cout << "--- METRICAS ---\n";
+    std::cout << "\n--- METRICAS ---\n";
     std::cout << "Cantidad de ciclos de percepciones: " << this->perceptionAmmount << '\n';
     std::cout << "Cantidad de energia gastada: " << this->energyUsed << '\n';
     std::cout << "Tiempos de ejecucion:";

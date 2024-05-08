@@ -12,3 +12,7 @@ void MoveToRoom::update(Skeld& skeld, Impostor& impostor) {
 bool MoveToRoom::usesEnergy() {
 	return true;
 }
+
+void MoveToRoom::printType() {
+    std::cout << "Se mueve al Room #" << transitionRoom << '\n';
+}

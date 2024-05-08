@@ -18,7 +18,11 @@ int main(){
     Strategy* bfsStrategy = new BreadthFirstSearch();
     Strategy* mcuStrategy = new MinimumUniformCost();
     Strategy* aStarStrategy = new AStar();
-
+    //SimulationAgent sim = SimulationAgent(50, 2, sabotages, bfsStrategy);
+    //SimulationAgent sim = SimulationAgent(50, 2, sabotages, mcuStrategy);
+    SimulationAgent sim = SimulationAgent(50, 2, sabotages, aStarStrategy);
+    sim.simulate();
+    /*
     for (const pair<int,int>& it : experimentos) {
         cout << "-----------------------------------\n";
         cout << "CREWMATES INICIALES: " << it.first << " - ENERGIA INICIAL: " << it.second << '\n';
@@ -44,4 +48,5 @@ int main(){
             simAgent.simulate();
         }
     }
+    */
 }

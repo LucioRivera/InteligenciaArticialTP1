@@ -11,3 +11,7 @@ void SabotageRoom::update(Skeld& skeld, Impostor& impostor) {
 bool SabotageRoom::usesEnergy() {
 	return false;
 }
+
+void SabotageRoom::printType() {
+	std::cout << "Se sabotea la maquina del Room #" << sabotageRoom << '\n';
+}

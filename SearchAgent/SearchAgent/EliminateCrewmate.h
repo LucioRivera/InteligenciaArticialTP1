@@ -6,6 +6,7 @@ public:
 	EliminateCrewmate(int);
 	void update(Skeld&, Impostor&) override;
 	bool usesEnergy() override;
+	void printType() override;
 private:
 	int crewmateIdx;
 };

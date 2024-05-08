@@ -106,3 +106,26 @@ Action* Node::getAction(Node parent, Node child) {
 		return new EliminateCrewmate(crewmateIdx);
 	}
 }
+
+std::string Node::getFormattedState() {
+	std::string state = "\"(" + std::to_string(this->room) + ", " + std::to_string(this->energy) + ", {";
+	bool f = false;
+	for (const int& c : this->crewmates) {
+		if (f) state += ",";
+		f = true;
+		state += std::to_string(c);
+	}
+	state += "}, {";
+	f = false;
+	for (const int& s : this->sabotagesLeft) {
+		if (f) state += ",";
+		f = true;
+		state += std::to_string(s);
+	}
+	state += "})\"";
+	return state;
+}
+
+void Node::printTransition(Node begin, Node end) {
+	std::cout << begin.getFormattedState() << " -> " << end.getFormattedState() << ";\n";
+}

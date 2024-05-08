@@ -6,6 +6,7 @@ public:
 	SabotageRoom(int);
 	void update(Skeld&, Impostor&) override;
 	bool usesEnergy() override;
+	void printType() override;
 private:
 	int sabotageRoom;
 };
