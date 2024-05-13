@@ -1,4 +1,175 @@
++++ STEP #0 +++
+-- ESTADO DE LA NAVE ---
+Crewmates posiciones: 2 12
+Crewmates tiempo restante: 0 0
+Tiempo poder: 3
+--- FIN ESTADO ---
+-- ESTADO DEL IMPOSTOR ---
+Habitacion actual: 3
+Energia actual: 50
+Crewmates restantes: 2 12
+Sabotajes restantes: 2 3 9
+--- FIN ESTADO ---
+Se sabotea la maquina del Room #3
 
++++ STEP #1 +++
+-- ESTADO DE LA NAVE ---
+Crewmates posiciones: 13 10
+Crewmates tiempo restante: 1 2
+Tiempo poder: 2
+--- FIN ESTADO ---
+-- ESTADO DEL IMPOSTOR ---
+Habitacion actual: 3
+Energia actual: 50
+Crewmates restantes: 2 12
+Sabotajes restantes: 2 9
+--- FIN ESTADO ---
+Se mueve al Room #8
+
++++ STEP #2 +++
+-- ESTADO DE LA NAVE ---
+Crewmates posiciones: 13 10
+Crewmates tiempo restante: 0 1
+Tiempo poder: 1
+--- FIN ESTADO ---
+-- ESTADO DEL IMPOSTOR ---
+Habitacion actual: 8
+Energia actual: 49
+Crewmates restantes: 2 10
+Sabotajes restantes: 2 9
+--- FIN ESTADO ---
+Se mueve al Room #9
+
++++ STEP #3 +++
+-- ESTADO DE LA NAVE ---
+Crewmates posiciones: 6 10
+Crewmates tiempo restante: 4 0
+Tiempo poder: 0
+--- FIN ESTADO ---
+-- ESTADO DEL IMPOSTOR ---
+Habitacion actual: 9
+Energia actual: 48
+Crewmates restantes: 2 10
+Sabotajes restantes: 2 9
+--- FIN ESTADO ---
+Se sabotea la maquina del Room #9
+
++++ STEP #4 +++
+-- ESTADO DE LA NAVE ---
+Crewmates posiciones: 6 12
+Crewmates tiempo restante: 3 4
+Tiempo poder: 4
+--- FIN ESTADO ---
+-- ESTADO DEL IMPOSTOR ---
+Habitacion actual: 9
+Energia actual: 48
+Crewmates restantes: 6 12
+Sabotajes restantes: 2
+--- FIN ESTADO ---
+Se mueve al Room #10
+
++++ STEP #5 +++
+-- ESTADO DE LA NAVE ---
+Crewmates posiciones: 6 12
+Crewmates tiempo restante: 2 3
+Tiempo poder: 3
+--- FIN ESTADO ---
+-- ESTADO DEL IMPOSTOR ---
+Habitacion actual: 10
+Energia actual: 47
+Crewmates restantes: 6 12
+Sabotajes restantes: 2
+--- FIN ESTADO ---
+Se mueve al Room #12
+
++++ STEP #6 +++
+-- ESTADO DE LA NAVE ---
+Crewmates posiciones: 6 12
+Crewmates tiempo restante: 1 2
+Tiempo poder: 2
+--- FIN ESTADO ---
+-- ESTADO DEL IMPOSTOR ---
+Habitacion actual: 12
+Energia actual: 46
+Crewmates restantes: 6 12
+Sabotajes restantes: 2
+--- FIN ESTADO ---
+Se elimina al crewmate #1
+
++++ STEP #7 +++
+-- ESTADO DE LA NAVE ---
+Crewmates posiciones: 6 -1
+Crewmates tiempo restante: 0 2
+Tiempo poder: 1
+--- FIN ESTADO ---
+-- ESTADO DEL IMPOSTOR ---
+Habitacion actual: 12
+Energia actual: 46
+Crewmates restantes: 6 -1
+Sabotajes restantes: 2
+--- FIN ESTADO ---
+Se mueve al Room #13
+
++++ STEP #8 +++
+-- ESTADO DE LA NAVE ---
+Crewmates posiciones: 13 -1
+Crewmates tiempo restante: 4 2
+Tiempo poder: 0
+--- FIN ESTADO ---
+-- ESTADO DEL IMPOSTOR ---
+Habitacion actual: 13
+Energia actual: 45
+Crewmates restantes: 13 -1
+Sabotajes restantes: 2
+--- FIN ESTADO ---
+Se elimina al crewmate #0
+
++++ STEP #9 +++
+-- ESTADO DE LA NAVE ---
+Crewmates posiciones: -1 -1
+Crewmates tiempo restante: 4 2
+Tiempo poder: 3
+--- FIN ESTADO ---
+-- ESTADO DEL IMPOSTOR ---
+Habitacion actual: 13
+Energia actual: 45
+Crewmates restantes: -1 -1
+Sabotajes restantes: 2
+--- FIN ESTADO ---
+Se mueve al Room #2
+
++++ STEP #10 +++
+-- ESTADO DE LA NAVE ---
+Crewmates posiciones: -1 -1
+Crewmates tiempo restante: 4 2
+Tiempo poder: 2
+--- FIN ESTADO ---
+-- ESTADO DEL IMPOSTOR ---
+Habitacion actual: 2
+Energia actual: 44
+Crewmates restantes: -1 -1
+Sabotajes restantes: 2
+--- FIN ESTADO ---
+Se sabotea la maquina del Room #2
+-- ESTADO DE LA NAVE ---
+Crewmates posiciones: -1 -1
+Crewmates tiempo restante: 4 2
+Tiempo poder: 2
+--- FIN ESTADO ---
+-- ESTADO DEL IMPOSTOR ---
+Habitacion actual: 2
+Energia actual: 44
+Crewmates restantes: -1 -1
+Sabotajes restantes:
+--- FIN ESTADO ---
+El agente gano
+
+--- METRICAS ---
+Cantidad de ciclos de percepciones: 11
+Cantidad de energia gastada: 6
+Tiempos de ejecucion: 86 38 29 17 13 12 8 3 1 0 0
+Tiempo promedio de ejecucion: 18.8182
+ --- ---
 ---------------------------------------------------------
 +++ STEP #0 +++
 -- ESTADO DE LA NAVE ---
